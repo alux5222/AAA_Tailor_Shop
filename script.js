@@ -34,3 +34,16 @@ window.addEventListener("scroll", () => {
         header.classList.remove("scrolled");
     }
 });
+
+/* ===================================
+Opens address in maps
+====================================*/
+const address = "2345 Southern BLVD SE, Rio Rancho, NM 87124";
+const encoded = encodeURIComponent(address);
+const isApple = /iPhone|iPad|Macintosh/.test(navigator.userAgent);
+
+const link = isApple
+    ? `https://maps.apple.com/?q=${encoded}`
+    : `https://www.google.com/maps?q=${encoded}`;
+
+    document.getElementById("mapLink").href = link;
