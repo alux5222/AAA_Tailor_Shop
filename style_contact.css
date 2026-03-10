@@ -1,0 +1,533 @@
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#f4f6ff;
+color:#333;
+}
+
+
+/* HAMBURGER */
+
+.hamburger{
+display:none;
+flex-direction:column;
+gap:6px;
+cursor:pointer;
+z-index:2000;
+}
+
+.hamburger span{
+width:28px;
+height:3px;
+background:rgb(0, 0, 0);
+border-radius:3px;
+transition:0.35s;
+}
+
+/* ANIMATE INTO X */
+
+.hamburger.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+background:rgb(255, 255, 255);
+}
+
+.hamburger.active span:nth-child(2){
+opacity:0;
+background:rgb(255, 255, 255);
+}
+
+.hamburger.active span:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
+background:rgb(255, 255, 255);
+}
+
+/* NAVBAR BASE */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+transition:0.35s;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+transition:0.35s;
+}
+
+/* SOLID NAVBAR WHEN SCROLLED */
+
+header.scrolled{
+background:rgba(0, 0, 0, 0.075);
+backdrop-filter:blur(10px);
+box-shadow:0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* smooth size change */
+
+header.scrolled nav{
+padding:12px 8%;
+}
+
+/* LOGO */
+nav h2{
+color:rgb(7, 7, 7);
+font-size:24px;
+letter-spacing:1px;
+}
+
+/* MENU */
+.menu{
+list-style:none;
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+.menu li{
+position:relative;
+}
+
+/* LINKS */
+.menu a{
+text-decoration:none;
+color:rgb(0, 0, 0);
+font-weight:500;
+font-size:16px;
+padding:8px 5px;
+transition:0.3s;
+}
+
+.menu a:hover{
+color:#f4c542;
+}
+
+/* DROPDOWN MENU */
+.submenu{
+position:absolute;
+top:40px;
+left:0;
+min-width:200px;
+list-style:none;
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+
+border-radius:8px;
+box-shadow:0 8px 25px rgba(0,0,0,0.25);
+
+display:none;
+flex-direction:column;
+padding:8px 0;
+}
+
+/* dropdown items */
+.submenu li{
+width:100%;
+}
+
+/* dropdown links */
+.submenu a{
+display:block;
+padding:12px 18px;
+color:rgb(0, 0, 0);
+font-size:14px;
+transition:0.25s;
+}
+
+/* hover effect */
+.submenu a:hover{
+background:rgba(255,255,255,0.15);
+padding-left:22px;
+}
+
+/* Make dropdown <li> the hover target */
+.dropdown {
+  position: relative;
+}
+
+/* Submenu hidden by default */
+.dropdown .submenu {
+  position: absolute;
+  top: 100%; /* right below parent li */
+  left: 0;
+  min-width: 220px;
+
+  background: rgba(255, 255, 255, 0.08); /* transparent glass effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  opacity: 0;         /* hidden initially */
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 1000;
+}
+
+/* Show submenu when hovering over the entire dropdown <li> */
+/* SHOW SUBMENU ON HOVER (entire <li>) */
+.dropdown:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* SUBMENU LINKS */
+.dropdown .submenu a {
+  padding: 12px 18px;
+  color: rgb(0, 0, 0); /* keep text readable on transparent bg */
+  text-decoration: none;
+  display: block;
+  transition: background 0.25s, color 0.25s;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* HOVER EFFECT FOR LINKS */
+.dropdown .submenu a:hover {
+  background: rgba(255, 255, 255, 0.15); /* slightly brighter on hover */
+  color: #f4c542; /* accent color */
+}
+
+/* Optional: fade-in animation */
+.dropdown .submenu {
+  pointer-events: auto; /* ensure links are clickable */
+}
+
+/* HERO */
+
+.contact-hero{
+background: linear-gradient(135deg,#2e4ad4,#7b8cff,#4fd1ff);
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+.contact-hero h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.contact-hero p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+line-height:1.6;
+}
+
+/* CONTACT FORM AREA */
+
+.contact-container{
+display:flex;
+justify-content:center;
+padding:60px 20px;
+}
+
+.contact-card{
+background:white;
+padding:40px;
+width:100%;
+max-width:600px;
+border-radius:10px;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+.contact-card h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+/* FORM */
+
+.form-group{
+display:flex;
+flex-direction:column;
+margin-bottom:20px;
+}
+
+label{
+margin-bottom:6px;
+font-weight:bold;
+}
+
+input,
+textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:16px;
+transition:0.2s;
+}
+
+input:focus,
+textarea:focus{
+outline:none;
+border-color:#2e4ad4;
+box-shadow:0 0 5px rgba(46,74,212,0.3);
+}
+
+/* BUTTON */
+
+button{
+width:100%;
+padding:14px;
+font-size:16px;
+border:none;
+border-radius:6px;
+background: linear-gradient(135deg,#2e4ad4,#4fd1ff);
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* MAP SECTION */
+
+.map-section{
+padding:10px 20px;
+text-align:center;
+background:#f5f7ff;
+}
+
+.map-section h2{
+margin-bottom:30px;
+font-size:30px;
+}
+
+.map-container{
+max-width:1000px;
+margin:auto;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+/* --- Contact Section Styling --- */
+
+#contact {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-family: "Inter", Arial, sans-serif;
+    color: #222;
+}
+
+#contact h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.contact-card,
+.hours-card {
+    background: #ffffff;
+    padding: 30px 35px;
+    margin-bottom: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover,
+.hours-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.contact-card p,
+.hours-card p,
+.hours-card li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.contact-card strong,
+.hours-card strong {
+    font-weight: 600;
+    color: #111;
+}
+
+/* --- Map Link Styling --- */
+
+#contact a#mapLink {
+    color: #1180ff;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+#contact a#mapLink:hover {
+    color: #005fcc;
+    border-color: #005fcc;
+}
+
+#contact a#mapLink:active {
+    color: #003f88;
+}
+
+/* Optional: subtle icon animation if you add a pin emoji */
+#contact a#mapLink:hover .pin {
+    transform: translateY(-2px);
+}
+
+/* --- Phone Link Styling --- */
+
+#contact a#callLink {
+    color: #0078ff;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+#contact a#callLink:hover {
+    color: #005fcc;
+    border-color: #005fcc;
+}
+
+#contact a#callLink:active {
+    color: #003f88;
+}
+
+.guarantee {
+    margin-top: 20px;
+    padding: 12px 16px;
+    background: #f5faff;
+    border-left: 4px solid #0078ff;
+    border-radius: 6px;
+    font-style: italic;
+}
+
+.hours-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hours-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hours-card li {
+    margin-bottom: 10px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+.hamburger{
+display:flex;
+}
+
+.menu{
+position:fixed;
+top:0;
+right:-100%;
+height:100vh;
+width:260px;
+
+background:rgba(0, 0, 0, 0.493);
+backdrop-filter:blur(12px);
+
+flex-direction:column;
+align-items:flex-start;
+padding:100px 30px;
+gap:20px;
+
+transition:0.4s ease;
+}
+
+.menu.active{
+right:0;
+}
+
+/* links */
+
+.menu a{
+font-size:18px;
+color:white;
+}
+
+/* dropdown */
+
+.submenu{
+display:none;
+flex-direction:column;
+gap:8px;
+
+margin-top:10px;
+margin-left:15px;
+background:rgba(207, 26, 26, 0.751);
+
+position:relative;   /* important */
+top:auto;
+left:auto;
+
+width:100%;
+}
+.submenu a{
+    color: #ffffff;
+}
+
+.dropdown{
+position:relative;
+}
+
+.dropdown.active .submenu{
+display:flex;
+}
+
+/* prevent body scroll */
+
+body.menu-open{
+overflow:hidden;
+}
+
+.contact-hero h1{
+font-size:32px;
+}
+
+.contact-card{
+padding:30px 20px;
+}
+
+#contact {
+  padding: 40px 15px;
+}
+
+.contact-card,
+.hours-card {
+  padding: 25px 20px;
+}
+
+}
