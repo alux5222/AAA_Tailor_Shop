@@ -5,14 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Women & Children's Alterations</title>
   <link rel="stylesheet" href="weddingAlterations.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="footer.css" />
 </head>
 
 <body>
+<header>
+    <nav>
 
-  <header>
-    <div class="logo">Women & Children's Alterations</div>
-    <div class="badge">Tailoring Experts</div>
-  </header>
+        <h2 class="logo">AAA Tailor Shop</h2>
+
+        <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+
+        <ul class="menu" id="menu">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="alterations.html">Alterations ▾</a>
+                <ul class="submenu">
+                    <li><a href="mensAlterations.html">Men's Alterations</a></li>
+                    <li><a href="militaryUniformAlterations.html">Military Uniform Alterations</a></li>
+                    <!-- <li><a href="womenAndChildrensAlteration.html">Women and Children's Alteration</a></li> -->
+                    <li><a href="weddingAlterations.html">Wedding Alterations</a></li>
+                    <li><a href="clothingRepairAndSpacialtySize.html">Clothing Repair and Specialty Sizes</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="tailoring.html">Tailoring ▾</a>
+                <ul class="submenu">
+                    <li><a href="customClothing.html">Custom Clothing</a></li>
+                    <li><a href="mensFormalTailoring.html">Men's Formal Tailoring</a></li>
+                    <li><a href="womensFormalTailoring.html">Women's Formal Tailoring</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>  
 
   <main>
     <section>
@@ -57,12 +93,52 @@
       </p>
     </section>
 
-    <div class="image-wrapper">
+    <!-- <div class="image-wrapper">
       <img src="images/women1.png" alt="Women's clothing alterations" />
-    </div>
+    </div> -->
   </main>
+  
+  <section id="contact" class="section contact">
 
-  <main style="padding-top: 0;">
+        <h2>Contact Us</h2>
+
+        <div class="contact-card">
+            <p><strong>Address</strong><br>
+            <a href="https://www.google.com/maps?q=2345+Southern+BLVD+SE,+Rio+Rancho,+NM+87124" 
+            target="_blank" 
+            rel="noopener noreferrer">
+            2345 Southern BLVD SE, Rio Rancho, NM 87124
+            </a>
+            </p>
+
+            <p><strong>Phone</strong><br>
+            <a id="callLink" href="tel:5054601340">(505) 460‑1340</a>
+            </p>
+
+
+            <p><strong>Email</strong><br>
+            aaatailorshop505@gmail.com</p>
+
+            <p class="guarantee">
+                Get the results you love or your money back — no questions asked
+            </p>
+        </div>
+
+        <div class="hours-card">
+            <h3>Hours of Operation</h3>
+
+            <ul>
+                <li><strong>Monday – Friday:</strong> 09:00 AM – 6:00 PM</li>
+                <li><strong>Saturday – Sunday:</strong> By Appointment Only  
+                    <br>(505-460-1340 | aaatailorshop505@gmail.com)
+                </li>
+                <li><strong>Closed:</strong> All Federal Holidays</li>
+            </ul>
+        </div>
+
+    </section>
+
+  <!-- <main style="padding-top: 0;">
     <div class="image-wrapper">
       <img src="images/women2.png" alt="Children's clothing alterations" />
     </div>
@@ -70,7 +146,11 @@
     <div class="image-wrapper">
       <img src="images/women3.png" alt="Family alterations services" />
     </div>
-  </main>
+  </main> -->
+<script src="script.js"></script>
 
+<footer>
+    <p>© 2026 Tailoring Services | Crafted with Care</p>
+</footer>
 </body>
 </html>

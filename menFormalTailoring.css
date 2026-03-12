@@ -31,6 +31,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 position:relative;
+padding-top: 80px;
 }
 
 .hero-overlay{
@@ -200,16 +201,6 @@ transition:0.3s;
 
 .btn:hover{
 background:#a8834e;
-}
-
-/* FOOTER */
-
-footer{
-background:#111;
-color:#aaa;
-text-align:center;
-padding:20px;
-font-size:0.9rem;
 }
 
 /* RESPONSIVE */

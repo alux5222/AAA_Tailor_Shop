@@ -5,13 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Women's Formal Tailoring</title>
 <link rel="stylesheet" href="womenFormalTailoring.css">
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="footer.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-
 <body>
+<header>
+    <nav>
 
-<header class="hero">
+        <h2 class="logo">AAA Tailor Shop</h2>
+
+        <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+
+        <ul class="menu" id="menu">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="alterations.html">Alterations ▾</a>
+                <ul class="submenu">
+                    <li><a href="mensAlterations.html">Men's Alterations</a></li>
+                    <li><a href="militaryUniformAlterations.html">Military Uniform Alterations</a></li>
+                    <li><a href="womenAndChildrensAlteration.html">Women and Children's Alteration</a></li>
+                    <li><a href="weddingAlterations.html">Wedding Alterations</a></li>
+                    <li><a href="clothingRepairAndSpacialtySize.html">Clothing Repair and Specialty Sizes</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="tailoring.html">Tailoring ▾</a>
+                <ul class="submenu">
+                    <li><a href="customClothing.html">Custom Clothing</a></li>
+                    <li><a href="mensFormalTailoring.html">Men's Formal Tailoring</a></li>
+                    <!-- <li><a href="womensFormalTailoring.html">Women's Formal Tailoring</a></li> -->
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>    
+
+<section class="hero">
     <div class="hero-content" data-aos="fade-up">
         <h1>Women's Formal Tailoring</h1>
         <h2>WE LOVE TAILORING FOR WOMEN</h2>
@@ -20,7 +60,7 @@
             regarding a woman’s formal attire. We take clothing that fits “okay” and turn it into something fantastic.
         </p>
     </div>
-</header>
+</section>
 
 <section class="about" data-aos="fade-up">
     <p>
@@ -47,12 +87,12 @@
     </div>
 </section>
 
-<section class="gallery">
+<!-- <section class="gallery">
     <img src="img1.jpg" alt="Tailoring Example" data-aos="zoom-in">
     <img src="img2.jpg" alt="Tailoring Example" data-aos="zoom-in">
     <img src="img3.jpg" alt="Tailoring Example" data-aos="zoom-in">
     <img src="img4.jpg" alt="Tailoring Example" data-aos="zoom-in">
-</section>
+</section> -->
 
 <section class="services">
 
@@ -84,7 +124,7 @@
 </section>
 
 <footer>
-    <p>© 2026 Women's Formal Tailoring</p>
+    <p>© 2026 Tailoring Services | Crafted with Care</p>
 </footer>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
@@ -94,5 +134,6 @@ duration: 1000,
 once: true
 });
 </script>
+<script src="script.js"></script>
 </body>
 </html>

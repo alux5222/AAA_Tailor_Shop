@@ -12,37 +12,6 @@ body {
   line-height: 1.7;
 }
 
-/* Header */
-header {
-  width: 100%;
-  padding: 1.5rem 8vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #ffffffcc;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #e5e5e5;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #222;
-}
-
-.tag {
-  padding: 0.4rem 0.9rem;
-  border-radius: 20px;
-  background: #ececff;
-  color: #4a4acb;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
 /* Hero Section */
 .hero {
   display: grid;

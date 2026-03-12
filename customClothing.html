@@ -5,16 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Custom Clothing</title>
   <link rel="stylesheet" href="tailorinsSub.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="footer.css" />
 </head>
 
 <body>
+<header>
+    <nav>
 
-  <header>
-    <div class="logo">Custom Clothing</div>
-    <nav class="nav">
-      <span class="tag">Tailored For You</span>
+        <h2 class="logo">AAA Tailor Shop</h2>
+
+        <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+
+        <ul class="menu" id="menu">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="alterations.html">Alterations ▾</a>
+                <ul class="submenu">
+                    <li><a href="mensAlterations.html">Men's Alterations</a></li>
+                    <li><a href="militaryUniformAlterations.html">Military Uniform Alterations</a></li>
+                    <li><a href="womenAndChildrensAlteration.html">Women and Children's Alteration</a></li>
+                    <li><a href="weddingAlterations.html">Wedding Alterations</a></li>
+                    <li><a href="clothingRepairAndSpacialtySize.html">Clothing Repair and Specialty Sizes</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="tailoring.html">Tailoring ▾</a>
+                <ul class="submenu">
+                    <!-- <li><a href="customClothing.html">Custom Clothing</a></li> -->
+                    <li><a href="mensFormalTailoring.html">Men's Formal Tailoring</a></li>
+                    <li><a href="womensFormalTailoring.html">Women's Formal Tailoring</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-  </header>
+</header>   
 
   <section class="hero">
     <div class="hero-text">
@@ -39,12 +73,12 @@
       <p class="highlight">You'll Look Great!</p>
     </div>
 
-    <div class="hero-image">
+    <!-- <div class="hero-image">
       <img src="images/custom1.png" alt="Custom clothing design" />
-    </div>
+    </div> -->
   </section>
 
-  <section class="gallery">
+  <!-- <section class="gallery">
     <div class="gallery-item">
       <img src="images/custom2.png" alt="Fabric selection" />
     </div>
@@ -54,7 +88,11 @@
     <div class="gallery-item">
       <img src="images/custom4.png" alt="Custom garment details" />
     </div>
-  </section>
+  </section> -->
+<script src="script.js"></script>
 
+<footer>
+    <p>© 2026 Tailoring Services | Crafted with Care</p>
+</footer>
 </body>
 </html>

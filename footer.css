@@ -1,67 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-
-body {
-  background: #ffffff18;
-  color: #a9a9a9;
-  line-height: 1.6;
-}
-
-main {
-  padding: 3rem 8vw 4rem;
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-  gap: 3rem;
-  align-items: center;
-  color: #000000;
-}
-
-.eyebrow {
-  padding-top: 3rem;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: #04b12f;
-  margin-bottom: 0.75rem;
-}
-
-h1 {
-  font-size: clamp(2.2rem, 3vw + 1.5rem, 3.2rem);
-  line-height: 1.1;
-  margin-bottom: 1rem;
-}
-
-h1 span {
-  background: linear-gradient(135deg, #03a81f, #6dc008);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.subtitle {
-  font-size: 1.05rem;
-  color: #000000;
-  max-width: 34rem;
-  margin-bottom: 1.75rem;
-}
-
-.image-wrapper {
-  width: 100%;
-  height: 650px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* --- Contact Section Styling --- */
 
 #contact {
@@ -178,96 +114,12 @@ h1 span {
 .hours-card li {
     margin-bottom: 10px;
 }
+/* FOOTER */
 
 footer{
 background:#111;
-color:white;
+color:#aaa;
 text-align:center;
 padding:20px;
-}
-
-
-
-/* MOBILE */
-@media (max-width: 750px) {
-
-.hamburger{
-display:flex;
-}
-
-.menu{
-position:fixed;
-top:0;
-right:-100%;
-height:100vh;
-width:260px;
-
-background:rgba(0, 0, 0, 0.493);
-backdrop-filter:blur(12px);
-
-flex-direction:column;
-align-items:flex-start;
-padding:100px 30px;
-gap:20px;
-
-transition:0.4s ease;
-}
-
-.menu.active{
-right:0;
-}
-
-/* links */
-
-.menu a{
-font-size:18px;
-color:white;
-}
-
-/* dropdown */
-
-.submenu{
-display:none;
-flex-direction:column;
-gap:8px;
-
-margin-top:10px;
-margin-left:15px;
-background:rgba(207, 26, 26, 0.751);
-
-position:relative;   /* important */
-top:auto;
-left:auto;
-
-width:100%;
-}
-.submenu a{
-    color: #ffffff;
-}
-
-.dropdown{
-position:relative;
-}
-
-.dropdown.active .submenu{
-display:flex;
-}
-
-  main {
-    grid-template-columns: 1fr;
-    padding: 2.5rem 6vw 3rem;
-  }
-  header {
-    padding: 1.25rem 6vw;
-  }
-
-  #contact {
-  padding: 40px 15px;
-}
-
-.contact-card,
-.hours-card {
-  padding: 25px 20px;
-}
-
+font-size:0.9rem;
 }
