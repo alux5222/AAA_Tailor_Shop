@@ -1,38 +1,38 @@
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
-
-hamburger.addEventListener("click", () => {
-
-    hamburger.classList.toggle("active");
-    menu.classList.toggle("active");
-    document.body.classList.toggle("menu-open");
-
-});
-
-/* mobile dropdown toggle */
-
-document.querySelectorAll(".dropdown > a").forEach(link => {
-
-    link.addEventListener("click", function(e){
-
-        if(window.innerWidth <= 768){
-            e.preventDefault();
-            this.parentElement.classList.toggle("active");
-        }
-    });
-});
-
-/* NAVBAR SCROLL EFFECT */
-
+const dropdownLinks = document.querySelectorAll(".dropdown > a");
 const header = document.querySelector("header");
 
+// Toggle mobile menu
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  menu.classList.toggle("active");
+  document.body.classList.toggle("menu-open");
+});
+
+// Toggle submenu on click (desktop & mobile)
+dropdownLinks.forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault(); // stop link navigation
+    const parent = this.parentElement;
+
+    // Toggle current dropdown
+    parent.classList.toggle("active");
+
+    // Close other dropdowns
+    dropdownLinks.forEach(other => {
+      if (other !== this) other.parentElement.classList.remove("active");
+    });
+  });
+});
+
+// Navbar scroll effect
 window.addEventListener("scroll", () => {
-    if(window.scrollY > 50){
-        header.classList.add("scrolled");
-    }
-    else{
-        header.classList.remove("scrolled");
-    }
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
 });
 
 /* ===================================

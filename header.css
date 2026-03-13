@@ -1,267 +1,243 @@
-/* HAMBURGER */
-.hamburger{
-display:none;
-flex-direction:column;
-gap:6px;
-cursor:pointer;
-z-index:2000;
+/* --- HEADER BASE --- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: 0.35s;
+  backdrop-filter: blur(10px);
 }
 
-.hamburger span{
-width:28px;
-height:3px;
-background:rgb(0, 0, 0);
-border-radius:3px;
-transition:0.35s;
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  transition: 0.35s;
 }
 
-/* ANIMATE INTO X */
-
-.hamburger.active span:nth-child(1){
-transform:rotate(45deg) translate(5px,5px);
-background:rgb(255, 255, 255);
+/* SCROLL EFFECT */
+header.scrolled {
+  background: rgba(0, 0, 0, 0.075);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.hamburger.active span:nth-child(2){
-opacity:0;
-background:rgb(255, 255, 255);
-}
-
-.hamburger.active span:nth-child(3){
-transform:rotate(-45deg) translate(6px,-6px);
-background:rgb(255, 255, 255);
-}
-
-/* NAVBAR BASE */
-
-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:1000;
-transition:0.35s;
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-transition:0.35s;
-}
-
-/* SOLID NAVBAR WHEN SCROLLED */
-
-header.scrolled{
-background:rgba(0, 0, 0, 0.075);
-backdrop-filter:blur(10px);
-box-shadow:0 4px 20px rgba(0,0,0,0.3);
-}
-
-/* smooth size change */
-
-header.scrolled nav{
-padding:12px 8%;
+header.scrolled nav {
+  padding: 12px 8%;
 }
 
 /* LOGO */
-nav h2{
-color:rgb(7, 7, 7);
-font-size:24px;
-letter-spacing:1px;
+nav h2 {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+nav h2 a {
+  text-decoration: none;
+  color: rgb(7, 7, 7);
 }
 
 /* MENU */
-.menu{
-list-style:none;
-display:flex;
-gap:30px;
-align-items:center;
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
-.menu li{
-position:relative;
+.menu li {
+  position: relative;
 }
 
-/* LINKS */
-.menu a{
-text-decoration:none;
-color:rgb(0, 0, 0);
-font-weight:500;
-font-size:16px;
-padding:8px 5px;
-transition:0.3s;
+.menu a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 5px;
+  transition: 0.3s;
 }
 
-.menu a:hover{
-color:#f4c542;
+.menu a:hover {
+  color: #f4c542;
 }
 
-/* DROPDOWN MENU */
-.submenu{
-position:absolute;
-top:40px;
-left:0;
-min-width:200px;
-list-style:none;
-
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);
-
-border-radius:8px;
-box-shadow:0 8px 25px rgba(0,0,0,0.25);
-
-display:none;
-flex-direction:column;
-padding:8px 0;
+/* --- HAMBURGER --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 2000;
 }
 
-/* dropdown items */
-.submenu li{
-width:100%;
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: rgb(0, 0, 0);
+  border-radius: 3px;
+  transition: 0.35s;
 }
 
-/* dropdown links */
-.submenu a{
-display:block;
-padding:12px 18px;
-color:rgb(0, 0, 0);
-font-size:14px;
-transition:0.25s;
+/* HAMBURGER ANIMATION TO X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background: #fff;
 }
 
-/* hover effect */
-.submenu a:hover{
-background:rgba(255,255,255,0.15);
-padding-left:22px;
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  background: #fff;
 }
 
-/* Make dropdown <li> the hover target */
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+  background: #fff;
+}
+
+/* --- DROPDOWN MENU --- */
 .dropdown {
   position: relative;
 }
 
-/* Submenu hidden by default */
-.dropdown .submenu {
+/* SUBMENU BASE */
+.submenu {
   position: absolute;
-  top: 100%; /* right below parent li */
+  top: 100%;
   left: 0;
   min-width: 220px;
-
-  background: rgba(255, 255, 255, 0.08); /* transparent glass effect */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  border-radius: 8px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-
+  background: rgba(1, 1, 1, 0.718);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
-  opacity: 0;         /* hidden initially */
+  padding: 5px 0;
+  opacity: 0;
   visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+  transform: translateY(10px) scale(0.96);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
   z-index: 1000;
-}
-
-/* Show submenu when hovering over the entire dropdown <li> */
-/* SHOW SUBMENU ON HOVER (entire <li>) */
-.dropdown:hover .submenu {
-  opacity: 1;
-  visibility: visible;
+  list-style: none;   /* removes bullets */
+  margin: 0; 
 }
 
 /* SUBMENU LINKS */
-.dropdown .submenu a {
-  padding: 12px 18px;
-  color: rgb(0, 0, 0); /* keep text readable on transparent bg */
-  text-decoration: none;
+.submenu a {
   display: block;
-  transition: background 0.25s, color 0.25s;
+  padding: 12px 18px;
+  color: #ffffff;
+  font-size: 16px;
   font-weight: 500;
-  font-size: 14px;
+  text-decoration: none;
   white-space: nowrap;
+  transition: all 0.25s ease;
+}
+.submenu li {
+  margin: 0;
+  padding: 0;
 }
 
-/* HOVER EFFECT FOR LINKS */
-.dropdown .submenu a:hover {
-  background: rgba(255, 255, 255, 0.15); /* slightly brighter on hover */
-  color: #f4c542; /* accent color */
+.submenu a:hover {
+  background: rgba(1, 1, 1, 0.482);
+  color: #f4c542;
+  padding-left: 22px;
 }
 
-/* Optional: fade-in animation */
-.dropdown .submenu {
-  pointer-events: auto; /* ensure links are clickable */
+.submenu li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-@media (max-width:750px){
+/* --- DESKTOP HOVER ON LINK --- */
+@media (min-width: 751px) {
+  .dropdown:hover > a,
+  .dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+  .submenu {
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  }
+}
 
-  .hamburger{
-  display:flex;
+/* --- MOBILE MENU --- */
+@media (max-width: 750px) {
+  .hamburger {
+    display: flex;
   }
 
-  .menu{
-  position:fixed;
-  top:0;
-  right:-100%;
-  height:100vh;
-  width:260px;
-
-  background:rgba(0, 0, 0, 0.493);
-  backdrop-filter:blur(12px);
-
-  flex-direction:column;
-  align-items:flex-start;
-  padding:100px 30px;
-  gap:20px;
-
-  transition:0.4s ease;
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 290px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 30px;
+    gap: 20px;
+    transition: right 0.3s ease-out;
   }
 
-  .menu.active{
-  right:0;
+  .menu.active {
+    right: 0;
   }
 
-  /* links */
-
-  .menu a{
-  font-size:18px;
-  color:white;
+  .menu a {
+    font-size: 18px;
+    color: white;
+    padding: 3px 0;
+    width: 100%;
+    transition: background 0.2s ease;
   }
 
-  /* dropdown */
-
-  .submenu{
-  display:none;
-  flex-direction:column;
-  gap:8px;
-
-  margin-top:10px;
-  margin-left:15px;
-  background:rgba(207, 26, 26, 0.751);
-
-  position:relative;   /* important */
-  top:auto;
-  left:auto;
-
-  width:100%;
-  }
-  .submenu a{
-      color: #ffffff;
+  .menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
   }
 
-  .dropdown{
-  position:relative;
+  /* MOBILE SUBMENU */
+  .submenu {
+    position: relative;
+    top: auto;
+    left: auto;
+    background: rgba(0,0,0,0.414);
+    border-radius: 8px;
+    padding: 3px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
   }
 
-  .dropdown.active .submenu{
-  display:flex;
+  .submenu a {
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 17px;
   }
 
-  /* prevent body scroll */
-
-  body.menu-open{
-  overflow:hidden;
+  .dropdown.active .submenu {
+    max-height: 500px;
   }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* SHOW SUBMENU WHEN CLICKED ON ANY SCREEN */
+.dropdown.active .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  max-height: 500px; /* ensures mobile and desktop click works */
 }
