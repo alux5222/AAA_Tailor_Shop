@@ -12,6 +12,16 @@ body {
   line-height: 1.7;
 }
 
+.hero1{
+height:70vh;
+background:url("images/repairsandSpecialtySize.png") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+padding-top: 80px;
+}
+
 /* Hero Section */
 .hero {
   display: grid;
@@ -19,6 +29,23 @@ body {
   gap: 3rem;
   padding: 4rem 8vw;
   align-items: center;
+}
+.hero-overlay{
+background:rgba(0,0,0,0.5);
+color:white;
+text-align:center;
+padding:40px 60px;
+border-radius:6px;
+}
+.hero1 h1{
+font-family:'Playfair Display', serif;
+font-size:3rem;
+margin-bottom:10px;
+}
+
+.hero1 p{
+font-size:1.2rem;
+letter-spacing:1px;
 }
 
 .hero-text h1 {
@@ -72,6 +99,39 @@ body {
 
 .gallery-item img:hover {
   transform: scale(1.03);
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+padding:80px 20px;
+background:#1e1e1e;
+color:white;
+}
+
+.cta h2{
+font-family:'Playfair Display', serif;
+font-size:2rem;
+margin-bottom:15px;
+}
+
+.cta p{
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 30px;
+background:#c7a26a;
+color:white;
+text-decoration:none;
+border-radius:4px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#a8834e;
 }
 
 /* Responsive */
