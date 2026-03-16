@@ -11,6 +11,39 @@ body {
   line-height: 1.6;
 }
 
+/* HERO */
+
+.hero{
+height:65vh;
+background:url("images/militaryIndexPic.png") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+padding-top: 80px;
+/* margin-top: 50px; */
+}
+
+.hero-overlay{
+background:rgba(0,0,0,0.5);
+color:white;
+text-align:center;
+padding:40px 60px;
+border-radius:6px;
+}
+
+.hero h1{
+font-family:'Playfair Display', serif;
+font-size:3rem;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:1.2rem;
+letter-spacing:1px;
+}
+
+
 main {
   padding: 3rem 8vw 4rem;
   display: grid;
@@ -20,14 +53,14 @@ main {
   color: #000000;
 }
 
-.eyebrow {
+/* .eyebrow {
   padding-top: 3rem;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: #04b12f;
   margin-bottom: 0.75rem;
-}
+} */
 
 h1 {
   font-size: clamp(2.2rem, 3vw + 1.5rem, 3.2rem);
@@ -177,6 +210,40 @@ h1 span {
 
 .hours-card li {
     margin-bottom: 10px;
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+margin-top: 2rem;
+padding:80px 20px;
+background:#1e1e1e;
+color:white;
+}
+
+.cta h2{
+font-family:'Playfair Display', serif;
+font-size:2rem;
+margin-bottom:15px;
+}
+
+.cta p{
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 30px;
+background:#c7a26a;
+color:white;
+text-decoration:none;
+border-radius:4px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#a8834e;
 }
 
 footer{
