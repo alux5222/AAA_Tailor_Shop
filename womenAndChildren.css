@@ -23,7 +23,7 @@ main {
 
 .hero{
 height:70vh;
-background:url("images/weddingDress.png") center/cover no-repeat;
+background:url("images/womenAnd\ Child.png") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -131,5 +131,21 @@ background:#a8834e;
     grid-template-columns: 1fr;
     padding: 2.5rem 6vw 3rem;
   }
+
+}
+
+@media (max-width:600px){
+
+.hero h1{
+font-size:2.2rem;
+}
+
+.services{
+grid-template-columns:1fr;
+}
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
 
 }
