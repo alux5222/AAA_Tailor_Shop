@@ -1,3 +1,7 @@
+html{
+    scroll-behavior:smooth;
+}
+
 /* --- HEADER BASE --- */
 header {
   position: fixed;
@@ -7,6 +11,23 @@ header {
   z-index: 1000;
   transition: 0.35s;
   backdrop-filter: blur(10px);
+}
+
+/* Logo inside h2 */
+.logo {
+    display: block;
+    width: 150px;      /* adjust width as needed */
+    height: 50px;      /* adjust height as needed */
+    background-image: url('images/new/Logo/aaatailorlogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    transition: 0.3s ease;
 }
 
 /* NAVBAR */
@@ -20,7 +41,7 @@ nav {
 
 /* SCROLL EFFECT */
 header.scrolled {
-  background: rgba(0, 0, 0, 0.075);
+  background: rgba(255, 255, 255, 0.263);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
@@ -187,6 +208,11 @@ nav h2 a {
 
   .menu.active {
     right: 0;
+  }
+
+  .logo {
+    width: 120px;
+    height: 40px;
   }
 
   .menu a {

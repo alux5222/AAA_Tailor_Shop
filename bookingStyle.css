@@ -5,6 +5,9 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 }
+html{
+    scroll-behavior:smooth;
+}
 
 body{
 font-family:'Inter',sans-serif;
@@ -14,6 +17,22 @@ min-height:100vh;
 line-height:1.5;
 }
 
+/* Logo inside h2 */
+.logo {
+    display: block;
+    width: 150px;      /* adjust width as needed */
+    height: 50px;      /* adjust height as needed */
+    background-image: url('images/new/Logo/aaatailorlogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
 
 /* ---------- Layout ---------- */
 
@@ -223,13 +242,18 @@ border-top:1px solid rgba(255, 255, 255, 0.447);
 
 @media (max-width:700px){
 
-.grid{
-grid-template-columns:1fr;
-}
+  .logo {
+    width: 120px;
+    height: 40px;
+  }
 
-.booking-container{
-padding:30px;
-}
+    .grid{
+    grid-template-columns:1fr;
+    }
+
+    .booking-container{
+    padding:30px;
+    }
 
 
 }
