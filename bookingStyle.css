@@ -169,7 +169,38 @@ color:#000000;
 accent-color:#7c3aed;
 }
 
+/* ---------- Time slots ---------- */
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
 
+.slot {
+  padding: 10px;
+  background: #f2f2f2;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.slot:hover {
+  background: #ddd;
+}
+
+.slot.selected {
+  background: black;
+  color: white;
+}
+
+.slot.disabled {
+    background: #ccc;
+    color: #888;
+    cursor: not-allowed;
+    pointer-events: none; /* blocks clicks */
+    opacity: 0.6;        /* optional fade effect */
+}
 /* ---------- Button ---------- */
 
 .btn-primary{
@@ -255,5 +286,11 @@ border-top:1px solid rgba(255, 255, 255, 0.447);
     padding:30px;
     }
 
+    .time-slots {
+    grid-template-columns: repeat(2, 1fr);
+    }
 
+    .time-slots { 
+    grid-template-columns: repeat(2, 1fr); 
+    }
 }

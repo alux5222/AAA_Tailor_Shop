@@ -64,83 +64,83 @@
 
 
 <main class="booking-section">
+    <div class="booking-container">
 
-<div class="booking-container">
+    <h2>Book Your Fitting</h2>
+    <p class="subtitle">Schedule your personal tailoring appointment</p>
 
-<h2>Book Your Fitting</h2>
-<p class="subtitle">Schedule your personal tailoring appointment</p>
+    <form id="bookingForm">
 
-<form id="bookingForm">
+        <div class="grid">
 
-<div class="grid">
+        <div class="field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+        </div>
 
-<div class="field">
-<label for="name">Full Name</label>
-<input type="text" id="name" name="name" required>
-</div>
+        <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        </div>
 
-<div class="field">
-<label for="email">Email</label>
-<input type="email" id="email" name="email" required>
-</div>
+        <div class="field">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+        </div>
 
-<div class="field">
-<label for="phone">Phone</label>
-<input type="tel" id="phone" name="phone" required>
-</div>
+        <div class="field">
+        <label for="service">Service</label>
+        <select id="service" name="service" required>
+        <option value="">Select Service</option>
+        <option value="Suit Fitting">Suit Fitting</option>
+        <option value="Dress Alteration">Dress Alteration</option>
+        <option value="Custom Garment">Custom Garment</option>
+        <option value="Measurement Appointment">Measurements Only</option>
+        </select>
+        </div>
 
-<div class="field">
-<label for="service">Service</label>
-<select id="service" name="service" required>
-<option value="">Select Service</option>
-<option value="Suit Fitting">Suit Fitting</option>
-<option value="Dress Alteration">Dress Alteration</option>
-<option value="Custom Garment">Custom Garment</option>
-<option value="Measurement Appointment">Measurements Only</option>
-</select>
-</div>
+        <div class="field">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+        </div>
 
-<div class="field">
-<label for="date">Date</label>
-<input type="date" id="date" name="date" required>
-</div>
+        <div class="field">
+        <label for="time">Time</label>
+            <div class="field">
+                <label>Select Time</label>
+                <div id="timeSlots" class="time-slots"></div>
+                <input type="hidden" id="time" name="time" required>
+                <p id="weekendNote" style="display:none; color: #666;"></p>
+            </div>
+        </div>
 
-<div class="field">
-<label for="time">Time</label>
-<input type="time" id="time" name="time" required>
-</div>
+        </div>
 
-</div>
+        <div class="field full">
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" rows="4"></textarea>
+        </div>
 
-<div class="field full">
-<label for="notes">Additional Notes</label>
-<textarea id="notes" name="notes" rows="4"></textarea>
-</div>
+        <div class="calendar-options">
 
-<div class="calendar-options">
+        <label class="checkbox">
+        <input type="checkbox" id="addGoogleCalendar">
+        Add to Google Calendar
+        </label>
 
-<label class="checkbox">
-<input type="checkbox" id="addGoogleCalendar">
-Add to Google Calendar
-</label>
+        <label class="checkbox">
+        <input type="checkbox" id="downloadICS">
+        Download Calendar File (.ics)
+        </label>
 
-<label class="checkbox">
-<input type="checkbox" id="downloadICS">
-Download Calendar File (.ics)
-</label>
+        </div>
 
-</div>
-
-<button type="submit" class="btn-primary">
-Book Appointment
-</button>
-
-<p id="statusMessage"></p>
-
-</form>
-
-</div>
-
+        <button type="submit" class="btn-primary">
+        Book Appointment
+        </button>
+        <p id="statusMessage"></p>
+        </form>
+    </div>
 </main>
 
 <script src="script.js"></script>
