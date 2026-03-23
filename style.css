@@ -122,6 +122,44 @@ background:#00a2b476;
 /* MOBILE MENU */
 
 @media (max-width:750px){
+    body{
+    background:#ffffff;
+    }
 
+    .hero::before{
+    background:rgba(0,0,0,0.45);
+    }
+
+    .hero h2,
+    .hero p{
+    color:#fff;
+    }
+
+    /* .hero{
+        height: 300px;
+        padding: 20px;
+    }
+
+    .hero h2{
+        font-size:24px;
+    }
+
+    .hero p{
+        font-size:18px;
+    } */
+
+    .section{
+        padding:50px 20px;
+    }
+
+    .card img{
+        height:150px;
+    }
+
+    .services{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+        gap:30px;
+    }
 
 }
