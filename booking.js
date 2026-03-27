@@ -380,6 +380,48 @@ form.addEventListener("submit", async function(e){
     const addGoogle = document.getElementById("addGoogleCalendar").checked;
     const downloadICS = document.getElementById("downloadICS").checked;
 
+
+function validateForm() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
+    const date = dateInput.value;
+    const time = hiddenTimeInput.value;
+    const notes = document.getElementById("notes").value.trim();
+
+    const errors = [];
+
+    // Name (letters + spaces, at least 2 chars)
+    if (!/^[a-zA-Z\s]{2,}$/.test(name)) {
+        errors.push("Name must be at least 2 characters and contain only letters.");
+    }
+
+    // Email (basic but strong enough)
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errors.push("Invalid email address.");
+    }
+
+    // Phone (supports multiple formats)
+    if (!/^\+?\d{10,15}$/.test(phone.replace(/[\s()-]/g, ""))) {
+        errors.push("Phone must be 10–15 digits.");
+    }
+
+    // Service (must be selected)
+    if (!service) {
+        errors.push("Please select a service.");
+    }
+
+    // Notes (optional but limit length)
+    if (notes.length > 500) {
+        errors.push("Notes cannot exceed 500 characters.");
+    }
+
+    return errors;
+}
+
+
+
     if(!time){
         statusMessage.innerText = "Please select a time slot.";
         submitBtn.disabled = false;
