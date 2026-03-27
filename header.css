@@ -16,8 +16,8 @@ header {
 /* Logo inside h2 */
 .logo {
     display: block;
-    width: 150px;      /* adjust width as needed */
-    height: 50px;      /* adjust height as needed */
+    width: 150px;
+    height: 50px;
     background-image: url('images/logonew.png');
     background-size: contain;
     background-repeat: no-repeat;

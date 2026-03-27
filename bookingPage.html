@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Book a Fitting | Tailor Studio</title>
+
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="bookingStyle.css">
+<link rel="stylesheet" href="footer.css">
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script defer src="booking.js"></script>
+
+</head>
+
+<body>
+
+<header>
+    <nav>
+
+        <a href="index.html" class="logo"></a>
+
+        <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+
+        <ul class="menu" id="menu">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="alterations.html">Alterations ▾</a>
+                <ul class="submenu">
+                    <li><a href="mensAlterations.html">Men's Alterations</a></li>
+                    <li><a href="militaryUniformAlterations.html">Military Uniform Alterations</a></li>
+                    <li><a href="womenAndChildrensAlteration.html">Women and Children's Alteration</a></li>
+                    <li><a href="weddingAlterations.html">Wedding Alterations</a></li>
+                    <li><a href="clothingRepairAndSpacialtySize.html">Clothing Repair and Specialty Sizes</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="tailoring.html">Tailoring ▾</a>
+                <ul class="submenu">
+                    <li><a href="customClothing.html">Custom Clothing</a></li>
+                    <li><a href="mensFormalTailoring.html">Men's Formal Tailoring</a></li>
+                    <li><a href="womensFormalTailoring.html">Women's Formal Tailoring</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="booking-section">
+    <div class="booking-container">
+        <h2>Book Your Fitting</h2>
+        <p class="subtitle">Schedule your personal tailoring appointment</p>
+
+        <form id="bookingForm">
+            <div class="grid">
+                <div class="field">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="field">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="field">
+                    <label for="service">Service</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select Service</option>
+                        <option value="Suit Fitting">Suit Fitting</option>
+                        <option value="Dress Alteration">Dress Alteration</option>
+                        <option value="Custom Garment">Custom Garment</option>
+                        <option value="Measurement Appointment">Measurements Only</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="field full">
+                    <label>Select Time</label>
+                    <div id="timeSlots" class="time-slots"></div>
+                    <input type="hidden" id="time" name="time" required>
+                    <p id="weekendNote" style="display:none;"></p>
+                </div>
+            </div>
+
+            <div class="field full">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" rows="4"></textarea>
+            </div>
+
+            <div class="calendar-options">
+                <label class="checkbox"><input type="checkbox" id="addGoogleCalendar"> Add to Google Calendar</label>
+                <label class="checkbox"><input type="checkbox" id="downloadICS"> Download Calendar File (.ics)</label>
+            </div>
+
+            <button type="submit" class="btn-primary">Book Appointment</button>
+            <p id="statusMessage"></p>
+        </form>
+    </div>
+</main>
+
+<!-- <script src="script.js"></script> -->
+
+<footer class="footer">
+    <div class="container">
+    <p>© 2026 Tailoring Services | Crafted with Care</p>
+    </div>
+</footer>
+
+</body>
+</html>
