@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Map service to Cal.com link
-    let calLink = "alux5222/fitting";
+    let calLink = "alux5222/dress";
     switch(service) {
       case "Suit": calLink = "alux5222/suit"; break;
       case "Dress": calLink = "alux5222/dress"; break;
