@@ -82,10 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Map service to Cal.com link
     let calLink = "alux5222/fitting";
     switch(service) {
-      case "Suit Fitting": calLink = "alux5222/suit"; break;
-      case "Dress Alteration": calLink = "alux5222/dress"; break;
-      case "Custom Garment": calLink = "alux5222/custom"; break;
-      case "Measurement Appointment": calLink = "alux5222/measurement"; break;
+      case "Suit": calLink = "alux5222/suit"; break;
+      case "Dress": calLink = "alux5222/dress"; break;
+      case "Custom": calLink = "alux5222/custom"; break;
+      case "Measurement": calLink = "alux5222/measurement"; break;
     }
 
     const start = `${date}T${time}:00`;
