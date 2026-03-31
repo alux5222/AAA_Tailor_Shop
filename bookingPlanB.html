@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Book a Fitting | Tailor Studio</title>
+
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="newBookingStyle.css">
+<link rel="stylesheet" href="footer.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<!-- <script defer src="calBooking.js"></script> -->
+
+</head>
+
+<body>
+
+<header>
+    <nav>
+
+        <a href="index.html" class="logo"></a>
+
+        <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+
+        <ul class="menu" id="menu">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="alterations.html">Alterations ▾</a>
+                <ul class="submenu">
+                    <li><a href="mensAlterations.html">Men's Alterations</a></li>
+                    <li><a href="militaryUniformAlterations.html">Military Uniform Alterations</a></li>
+                    <li><a href="womenAndChildrensAlteration.html">Women and Children's Alteration</a></li>
+                    <li><a href="weddingAlterations.html">Wedding Alterations</a></li>
+                    <li><a href="clothingRepairAndSpacialtySize.html">Clothing Repair and Specialty Sizes</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="tailoring.html">Tailoring ▾</a>
+                <ul class="submenu">
+                    <li><a href="customClothing.html">Custom Clothing</a></li>
+                    <li><a href="mensFormalTailoring.html">Men's Formal Tailoring</a></li>
+                    <li><a href="womensFormalTailoring.html">Women's Formal Tailoring</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="booking-section">
+    <iframe 
+        src="https://cal.com/alux5222/fitting"
+        width="100%" 
+        height="800px" 
+        frameborder="0"
+        style="border:none;">
+    </iframe>
+</main>
+
+<script src="script.js"></script>
+
+<footer class="footer">
+    <div class="container">
+    <p>© 2026 Tailoring Services | Crafted with Care</p>
+    </div>
+</footer>
+
+</body>
+</html>
