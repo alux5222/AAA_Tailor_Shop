@@ -75,11 +75,14 @@ nav h2 a {
 
 .menu a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-weight: 500;
   font-size: 16px;
   padding: 8px 5px;
   transition: 0.3s;
+}
+header.scrolled .menu a{
+  color: rgb(0, 0, 0);
 }
 
 .menu a:hover {
@@ -98,9 +101,13 @@ nav h2 a {
 .hamburger span {
   width: 28px;
   height: 3px;
-  background: rgb(0, 0, 0);
+  background: rgb(239, 239, 239);
   border-radius: 3px;
   transition: 0.35s;
+}
+
+header.scrolled .hamburger span {
+    background: rgb(0, 0, 0);
 }
 
 /* HAMBURGER ANIMATION TO X */
@@ -170,6 +177,18 @@ nav h2 a {
 
 .submenu li:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+header.scrolled .submenu{
+  background: rgba(226, 226, 226, 0.718);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15); 
+}
+header.scrolled .submenu a:hover {
+  background: rgba(1, 1, 1, 0.402);
+  color: #f8c027;
+  padding-left: 22px;
 }
 
 /* --- DESKTOP HOVER ON LINK --- */
@@ -251,8 +270,24 @@ nav h2 a {
     font-size: 17px;
   }
 
+  header.scrolled .menu a{
+    color: rgb(244, 244, 244);
+  }
+
   .dropdown.active .submenu {
     max-height: 500px;
+  }
+
+  header.scrolled .submenu{
+    background: rgba(32, 32, 32, 0.032);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15); 
+  }
+  header.scrolled .submenu a:hover {
+    background: rgba(1, 1, 1, 0.402);
+    color: #f8c027;
+    padding-left: 22px;
   }
 
   body.menu-open {

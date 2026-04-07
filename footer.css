@@ -23,6 +23,7 @@ letter-spacing:.5px;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:30px;
+justify-items: center;
 }
 
 /* CARDS */
@@ -34,13 +35,14 @@ background:rgba(255,255,255,0.9);
 backdrop-filter:blur(10px);
 
 border-radius:16px;
-
+text-align: center;
 padding:35px;
 
 box-shadow:
 0 10px 25px rgba(0,0,0,0.08);
 
 transition:all .25s ease;
+
 }
 
 .contact-card:hover,
@@ -57,6 +59,9 @@ display:flex;
 gap:15px;
 margin-bottom:18px;
 align-items:flex-start;
+
+justify-content: center;
+text-align: center;
 }
 
 .icon{
@@ -72,6 +77,11 @@ font-weight:600;
 text-decoration:none;
 border-bottom:2px solid transparent;
 transition:all .2s ease;
+}
+/* Center text blocks inside cards */
+.contact-card p,
+.hours-card li {
+  text-align: center;
 }
 
 #contact a:hover{

@@ -5,6 +5,10 @@ body{
 header{
     background-color: rgba(240, 248, 255, 0.658);
 }
+header{
+    background-color: #2c2c2c62;
+}
+
 /* Reset spacing for main area */
 .booking-section {
     margin-top: 2rem;
